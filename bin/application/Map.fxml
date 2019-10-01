@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="500.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="5.0">
+         <children>
+            <Label text="Zoom" />
+            <Button mnemonicParsing="false" onAction="#zoomOut" prefHeight="26.0" prefWidth="26.0" text="-" />
+            <Slider fx:id="slider" />
+            <Button mnemonicParsing="false" onAction="#zoomIn" text="+" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label text="Visuals" />
+            <ToggleButton mnemonicParsing="false" text="Large UI" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <SplitPane dividerPositions="0.5" VBox.vgrow="ALWAYS">
+         <items>
+            <ScrollPane fx:id="map_scrollpane" prefHeight="441.0" prefWidth="302.0">
+               <content>
+                  <Pane fx:id="mypane">
+                     <children>
+                        <Pane fx:id="mypane2" prefHeight="200.0" prefWidth="200.0" />
+                        <ImageView fx:id="imageView" onMouseDragged="#pinMove">
+                           <image>
+                              <Image url="@../GOTMAP.jpg" />
+                           </image>
+                        </ImageView>
+                        <MenuButton fx:id="map_pin1" layoutX="162.0" layoutY="161.0" mnemonicParsing="false" onMouseDragged="#pinMove" styleClass="map-pin1" />
+                        <MenuButton fx:id="map_pin2" layoutX="95.0" layoutY="71.0" mnemonicParsing="false" styleClass="map-pin2" stylesheets="@application.css" />
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+            <Pane prefHeight="538.0" prefWidth="310.0">
+               <children>
+                  <ComboBox fx:id="avoidPointInput" layoutX="31.0" layoutY="404.0" prefWidth="150.0" promptText="Avoidpoint" />
+                  <Button layoutX="57.0" layoutY="437.0" mnemonicParsing="false" onAction="#avoidPointFunc" text="Avoidpoint City" />
+                  <ComboBox fx:id="select1" layoutX="26.0" layoutY="34.0" prefHeight="25.0" prefWidth="115.0" />
+                  <ComboBox fx:id="select2" layoutX="26.0" layoutY="91.0" prefHeight="25.0" prefWidth="115.0" />
+                  <Label layoutX="12.0" layoutY="14.0" text="Departure:" />
+                  <Label layoutX="12.0" layoutY="74.0" text="Destination:" />
+                  <Button layoutX="26.0" layoutY="140.0" mnemonicParsing="false" onAction="#generatingSinglePathP" prefHeight="25.0" prefWidth="140.0" text="Generate Single Route" textAlignment="JUSTIFY" />
+                  <Button layoutX="26.0" layoutY="180.0" mnemonicParsing="false" onAction="#generatingallpath" prefHeight="25.0" prefWidth="160.0" text="Generate Multiple Routes" />
+                  <ComboBox fx:id="wayPointInput" layoutX="31.0" layoutY="221.0" prefWidth="150.0" promptText="Waypoint" />
+                  <Button layoutX="26.0" layoutY="291.0" mnemonicParsing="false" onAction="#shortestPath" prefHeight="25.0" prefWidth="160.0" text="Generate Shortest Route" textAlignment="JUSTIFY" />
+                  <Button layoutX="26.0" layoutY="326.0" mnemonicParsing="false" onAction="#easiestPath" prefHeight="25.0" prefWidth="160.0" text="Generate Easiest Route" textAlignment="JUSTIFY" />
+                  <Button layoutX="26.0" layoutY="362.0" mnemonicParsing="false" onAction="#safestPath" prefHeight="25.0" prefWidth="160.0" text="Generate Safest Route" textAlignment="JUSTIFY" />
+                  <Button layoutX="61.0" layoutY="257.0" mnemonicParsing="false" onAction="#wayPointIncludeFunc" text="Waypoint City" />
+               </children>
+            </Pane>
+         </items>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </SplitPane>
+   </children>
+</VBox>

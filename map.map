@@ -1,0 +1,92 @@
+
+#the number of cities
+43
+
+#city name,x,y
+Castle Black, 963.635818309064, 530.110264371092
+The Dreadfort, 1026.68305627889, 808.213014253298
+Winterfell,820,850
+Barrow Town, 670.564197559144, 1027.94592708038
+White Harbor,930,1050
+Moat Cailin,820,1100
+The Twins,790,1320
+The Eyrie,1040,1390
+Riverrun,750,1490
+Harrenhal, 910.50243570366, 1538.13039134556
+Gulltown,1210,1430
+The Crag, 550, 1510
+Pyke,520, 1420
+Faircastle,500,1550
+Casterly Rock,580,1590
+Lannisport,520,1650
+Highgarden,633.333333333333, 1939.33333333333
+Storms End, 1130, 1880
+Oldtown, 520, 2080
+Sunspear, 1208, 2200
+Hannisport, 518.40000000, 1651.19999999999
+Bear Island,640,640
+King's Landing, 978.666666666666, 1708.66666666666
+Dragonstone,1190,1590
+Braavos,1450,1260
+Lorath,1650,1310
+Jinqi,4310.0,2582.0
+Qohor,1969.65,1692.68
+Saath,2240.0,1374.0
+Vaes khewo,2460.0,1730.0
+Vaes Dothrak,3196.0,1574.0
+Qarkash,3258.0,2448.0
+Tiqui,3918.0,2178.0
+Faros,3384.0,2688.0
+Yin,3920.0,2696.0
+Ib Sar,3489.818,1117.454
+Nefer,4378.0,1668.0
+Zabhad,3658.0,3068.0
+Pentos,1460.0,1696.0
+Myr,1550.0,1960.0
+Mantarys,2248.0,2162.0
+Astapor,2608.0,2312.0
+New Ghis,2680.0,2658.0
+
+#the number of edges
+39
+
+#city1,city2,distance,safety,easy
+Castle Black,The Dreadfort,5,1,2
+Castle Black,Barrow Town,10,5,5
+The Dreadfort,Barrow Town,6,1,1
+The Dreadfort,Harrenhal,15,4,5
+The Dreadfort,Braavos,10,4,3
+Harrenhal,Pentos,8,4,3
+Storms End,Myr,5,4,3
+Storms End,Pentos,4,3,3
+Braavos,Lorath,2,2,1
+Lorath,Saath,7,3,3
+Saath,Vaes khewo,4,1,1
+Saath,Vaes Dothrak,16,1,1
+Saath,Ib Sar,22,2,4
+Ib Sar,Nefer,22,2,4
+Nefer,Jinqi,22,1,4
+Vaes khewo,Vaes Dothrak,12,1,1
+Vaes Dothrak,Tiqui,20,5,5
+Braavos,Qohor,10,2,3
+Pentos,Qohor,7,1,1
+Myr,Qohor,6,1,1
+Myr,Mantarys,11,1,2
+Qohor,Vaes khewo,6,2,2
+Qohor,Mantarys,7,1,1
+Mantarys,Astapor,4,2,3
+Astapor,New Ghis,3,2,2
+Astapor,Qarkash,10,2,2
+New Ghis,Faros,10,4,1
+Qarkash,Tiqui,11,3,5
+Tiqui,Jinqi,6,1,1
+Faros,Yin,6,2,2
+Yin,Jinqi,4,1,1
+Barrow Town,Hannisport,13,4,5
+Harrenhal,King's Landing,3,1,1
+Hannisport,King's Landing,8,2,2
+Hannisport,Highgarden,5,1,1
+King's Landing,Storms End,4,2,2
+Highgarden,Storms End,8,1,1
+Highgarden,Sunspear,8,4,4
+Storms End,Sunspear,5,3,4
